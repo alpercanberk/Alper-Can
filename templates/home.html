@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block head_title %}Welcome|
+{% endblock %}
+
+
+<!--
+<style>
+{% block style %}
+
+.text-align-center{
+
+text-align:center;
+
+
+
+}
+
+
+
+
+
+
+{% endblock %}
+</style>
+-->
+
+
+
+
+{% block jumbotron_content %}
+<!-- Main component for a primary marketing message or call to action -->
+	<div class='row'>
+		<div class='col-sm-6'>
+	       
+
+	        <h1>Alper Can!</h1>
+
+	        <p style="color:green">If you are a fan of Alper Canberk,sign up!</p>
+	        	
+	        		
+	        
+	        <p>If you dont think anything good or bad about me you dont have to do anything.</p>
+
+
+
+	        <p style='color:red'>But If you hate me just see me in person	</p>
+
+
+
+	        
+	          <a class="btn btn-lg btn-primary" href="" role="button">Join &raquo;</a>
+	        
+	      </div>
+	      <div class='col-sm-6' style="background-color:black;height:300px; overflow: hidden;">
+	      <iframe width="560" height="300" src="https://www.youtube.com/embed/gUpNOLcPa8A" frameborder="0" allowfullscreen></iframe>
+
+
+	    </div>
+	</div>      
+{% endblock %}
+{% block content %}
+
+
+
+	<div class="row">
+
+
+		<div class="col-sm-3 pull-left text-align-center" style="color:white">
+			<p class='lead'>I am Alper and I'm 13 years old</p>
+		</div>
+		<div class="col-sm-3 pull-left text-align-center" style="color:white">
+			<p class='lead'>I like coding,playing piano,anime and video games</p>
+		</div>
+		<div class="col-sm-3 pull-left text-align-center" style="color:white">
+			<p class='lead'>Hope to meet you soon!</p>
+		</div>
+		<div class="col-sm-3 pull-right col-xs-12">
+
+		
+			<h1 style="color:white" class="text-align-center">{{template_title}}</h1>
+			<form method = 'POST' action = '' style="color:white">{% csrf_token %}
+			{{form|crispy}}
+
+
+
+			<input type='submit' class='btn btn-primary' value = 'Sign Up'>
+
+			
+			</form>
+		</div>
+	</div>
+
+
+
+{% endblock %}
