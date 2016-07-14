@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block head_title %}Welcome|
+{% endblock %}
+{% load staticfiles %}
+
+
+
+
+
+
+
+{% block jumbotron %}
+{% endblock %}
+
+{% block content %}
+<div style="color:white" class="text-align-center"><font size="17">Blog</font></div>
+{% for entry in all_entries %}
+<div class="jumbotron">
+<h3><div class="pull-right">{{entry.timestamp}}</div></h3>
+<h2 ><div style="font-size:30px">{{entry.blogtitle}}</div></h2>
+<div style="font-size:20px">{{entry.content}}</div>
+
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -9,3 +9,12 @@ class SignUp(models.Model):
 
 	def __unicode__(self):
 		return self.email
+
+# Create your models here.
+class BlogPost(models.Model):
+	blogtitle = models.CharField(max_length=30,blank=True,null=True)
+	content = models.TextField(blank=True,null=True)
+	timestamp = models.DateTimeField(auto_now_add=True,auto_now=False)
+
+	def __unicode__(self):
+		return self.blogtitle or u''

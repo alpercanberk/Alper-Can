@@ -2,6 +2,7 @@ from django.conf import settings
 from django.shortcuts import render
 from .forms import ContactForm,SignUpForm
 from django.core.mail import send_mail
+from .models import BlogPost
 # Create your views here.
 def home(request):
 	title="Welcome"
@@ -48,4 +49,14 @@ def contact(request):
 		"form":form
 
 	}
-	return render(request,"forms.html",context)
+	return render(request,"contact.html",context)
+
+def blog(request):
+	all_entries = BlogPost.objects.all()
+	context={
+
+
+	"all_entries":all_entries
+
+	}
+	return render(request,"blog.html",context)

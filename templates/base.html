@@ -11,8 +11,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{% static 'img/favicon' %}">
-
     <title>{% block head_title %}{% endblock %}AlperCan.Space</title>
 
     
@@ -28,28 +26,14 @@
     <![endif]-->
     {% include 'head_css.html' %}
 
-
-        {% block style %}
-
-
-
-
-
-
-
-
-        {% endblock %}
-    
-
-
+   
 
 
   </head>
  
 <body>
     {% include 'navbar.html' %}
-    <!-- Static navbar -->
-    
+
 
 
     <div class="container">
@@ -61,6 +45,8 @@
                 {% block jumbotron_content %}
 
                 {% endblock %}
+                {% block contactform %}
+        {% endblock %}
             </div>
         {% endblock %}
 
@@ -71,8 +57,7 @@
 
 
         {% endblock %}
-      
-
+       
     </div> <!-- /container -->
 
     <!-- Bootstrap core JavaScript
