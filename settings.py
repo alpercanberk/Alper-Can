@@ -121,7 +121,7 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL='/media/'
-MEDIA_ROOT=os.path.join(os.path.dirname(BASE_DIR), "static_in_virtualenv","media_root")
+MEDIA_ROOT=os.path.join(os.path.dirname(BASE_DIR), "static")
 
 
 
